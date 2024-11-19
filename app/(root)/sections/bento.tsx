@@ -117,7 +117,7 @@ const features = [
 
 export default function Bento() {
   return (
-    <div className="flex flex-col min-h-screen w-full items-center justify-center gap-20 py-16">
+    <div className="flex flex-col min-h-screen w-full items-center justify-center gap-20 py-16 px-6 overflow-clip">
       <h1 className="md:text-6xl text-3xl capitalize font-bold">
         Features that make us unique
       </h1>

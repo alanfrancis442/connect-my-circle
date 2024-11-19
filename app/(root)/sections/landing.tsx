@@ -5,9 +5,9 @@ import React from "react";
 
 const Landing = () => {
   return (
-    <section className="py-32 flex justify-center items-center min-h-screen">
+    <section className="md:py-32 flex justify-center items-center min-h-screen">
       <div className="container">
-        <div className="grid items-center gap-36 lg:grid-cols-2">
+        <div className="flex items-center gap-36 max-md:flex-col-reverse ">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <h3>A Smart Way to Connect </h3>
             <div>
@@ -22,9 +22,9 @@ const Landing = () => {
               Connect Instantly with Your Custom NFC Business Card from Connect
               My Circle
             </p>
-            <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
-              <Button className="w-full sm:w-auto">Get Started</Button>
-              <Button variant="outline" className="w-full sm:w-auto">
+            <div className="flex w-full justify-center gap-2 md:gap-8 lg:justify-start">
+              <Button className="md:w-full  p-6 text-xl">Get Started</Button>
+              <Button variant="outline" className="md:w-full  p-6 text-xl">
                 Learn More
                 <ArrowDownRight className="ml-2 size-4" />
               </Button>

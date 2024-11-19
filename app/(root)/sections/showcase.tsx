@@ -10,7 +10,7 @@ const Showcase = () => {
   return (
     <div
       ref={ref}
-      className="flex justify-center items-center flex-col py-16 gap-12"
+      className="flex justify-center items-center flex-col py-16 gap-12 px-8"
     >
       <motion.div
         initial={{
@@ -36,23 +36,28 @@ const Showcase = () => {
           draggable={false}
         ></Image>
       </motion.div>
-      <div className="container flex gap-5">
-        {Array.from({ length: 4 }, (_, i) => (
-          <BlurFade key={i} duration={1} inView delay={0.25 + i * 0.15}>
-            <div key={i} className="flex justify-center items-center ">
-              <div className=" flex flex-row justify-center items-center rounded-md overflow-clip">
-                <Image
-                  src={`/showcase/card${i + 1}.webp`}
-                  width={500}
-                  height={500}
-                  alt="Showcase Image"
-                  className="rounded-lg w-[20vw] "
-                  draggable={false}
-                ></Image>
+      <div className="container px-4 py-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {Array.from({ length: 4 }, (_, i) => (
+            <BlurFade key={i} duration={1} inView delay={0.25 + i * 0.15}>
+              <div className="relative aspect-square w-full">
+                <div className="h-full w-full overflow-hidden rounded-lg">
+                  <Image
+                    src={`/showcase/card${i + 1}.webp`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, 
+                           (max-width: 1024px) 50vw,
+                           25vw"
+                    alt="Showcase Image"
+                    className="object-cover transition-transform hover:scale-105"
+                    draggable={false}
+                    priority={i === 0}
+                  />
+                </div>
               </div>
-            </div>
-          </BlurFade>
-        ))}
+            </BlurFade>
+          ))}
+        </div>
       </div>
     </div>
   );
