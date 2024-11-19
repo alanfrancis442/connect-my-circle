@@ -3,6 +3,7 @@ import Landing from "./sections/landing";
 import Details from "./sections/details";
 import Bento from "./sections/bento";
 import Footer from "./sections/footer";
+import Showcase from "./sections/showcase";
 
 const Page = () => {
   return (
@@ -10,6 +11,7 @@ const Page = () => {
       <Landing />
       <Details />
       <Bento />
+      <Showcase />
       <Footer />
     </div>
   );

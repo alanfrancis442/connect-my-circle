@@ -19,7 +19,7 @@ const features = [
       <BlurFade duration={1.5} inViewMargin="350px 0px 0px 0px" inView>
         <img
           src="/landing/landing.png"
-          className="absolute -right-20 -top-20 opacity-60"
+          className="absolute -right-20 -top-20 "
         />
         <video
           src="/displayvideo.webm"
@@ -42,7 +42,7 @@ const features = [
       <BlurFade duration={1.5} inViewMargin="350px 0px 0px 0px" inView>
         <img
           src="/landing/landing.png"
-          className="absolute -right-20 -top-20 opacity-60"
+          className="absolute -right-20 -top-20 "
         />
       </BlurFade>
     ),
@@ -58,7 +58,7 @@ const features = [
       <BlurFade duration={1.5} inViewMargin="350px 0px 0px 0px" inView>
         <img
           src="/landing/landing.png"
-          className="absolute -right-20 -top-20 opacity-60"
+          className="absolute -right-20 -top-20 "
         />
       </BlurFade>
     ),
@@ -74,7 +74,7 @@ const features = [
       <BlurFade duration={1.5} inViewMargin="350px 0px 0px 0px" inView>
         <img
           src="/landing/landing.png"
-          className="absolute -right-20 -top-20 opacity-60"
+          className="absolute -right-20 -top-20 "
         />
       </BlurFade>
     ),
@@ -91,7 +91,7 @@ const features = [
       <BlurFade duration={1.5} inViewMargin="350px 0px 0px 0px" inView>
         <img
           src="/landing/landing.png"
-          className="absolute -right-20 -top-20 opacity-60"
+          className="absolute -right-20 -top-20 "
         />
       </BlurFade>
     ),
@@ -107,7 +107,7 @@ const features = [
       <BlurFade duration={1.5} inViewMargin="350px 0px 0px 0px" inView>
         <img
           src="/landing/landing.png"
-          className="absolute -right-20 -top-20 opacity-60"
+          className="absolute -right-20 -top-20 "
         />
       </BlurFade>
     ),
