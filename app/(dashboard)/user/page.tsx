@@ -16,7 +16,7 @@ const Page = () => {
   const router = useRouter();
 
   return (
-    <div className="p-2 flex flex-col h-screen">
+    <div className="p-2 flex flex-col min-h-screen">
       {/* Greeting Section */}
       <div className="mb-8">
         <h1 className="text-4xl font-bold">Welcome back, User!</h1>
@@ -26,7 +26,7 @@ const Page = () => {
       </div>
 
       {/* Recent Activity */}
-      <div className="bg-[#F2F3F7] p-12 rounded-3xl shadow h-full w-full flex-grow">
+      <div className="bg-[#F2F3F7] p-12 py-20 rounded-3xl shadow h-full w-full flex-grow">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {dummyCards.map((card, i) => (
             <BlurFade key={card.id} duration={1} inView delay={0.25 * i}>

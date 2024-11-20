@@ -1,45 +1,74 @@
-import { Button } from "@/components/ui/button";
-import { ArrowDownRight } from "lucide-react";
-import Image from "next/image";
-import React from "react";
+"use client";
 
-const Landing = () => {
+import React, { useRef } from "react";
+import { Canvas, useFrame, useLoader } from "@react-three/fiber";
+import { DoubleSide, TextureLoader } from "three";
+import * as THREE from "three";
+
+interface CardProps {
+  position: [number, number, number];
+}
+
+function Card(props: CardProps) {
+  const ref = useRef<THREE.Mesh>(null);
+  const texture = useLoader(TextureLoader, "/showcase/Banner.png");
+
+  useFrame((state) => {
+    const elapsedTime = state.clock.getElapsedTime();
+    if (ref.current) {
+      ref.current.rotation.y = elapsedTime * 0.2;
+
+      ref.current.position.y = Math.sin(elapsedTime * 0.5) * 0.005;
+
+      ref.current.rotation.z = elapsedTime * 0.05;
+
+      ref.current.rotation.x = Math.sin(elapsedTime * 0.5) * 0.01;
+    }
+  });
+
   return (
-    <section className="md:py-32 flex justify-center items-center min-h-screen">
-      <div className="container">
-        <div className="flex items-center gap-36 max-md:flex-col-reverse ">
-          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-            <h3>A Smart Way to Connect </h3>
-            <div>
-              <h1 className="my-6 text-pretty text-4xl font-bold lg:text-6xl">
-                Smart Business Cards
-              </h1>
-              <h1 className="my-6 text-pretty text-4xl font-bold lg:text-6xl">
-                Designed to Impress.
-              </h1>
-            </div>
-            <p className="mb-8 max-w-xl text-muted-foreground lg:text-xl">
-              Connect Instantly with Your Custom NFC Business Card from Connect
-              My Circle
-            </p>
-            <div className="flex w-full justify-center gap-2 md:gap-8 lg:justify-start">
-              <Button className="md:w-full  p-6 text-xl">Get Started</Button>
-              <Button variant="outline" className="md:w-full  p-6 text-xl">
-                Learn More
-                <ArrowDownRight className="ml-2 size-4" />
-              </Button>
-            </div>
-          </div>
-          <Image
-            src={"/landing/landing.png"}
-            width={1200}
-            height={1200}
-            alt="Landing Image"
-            className="rounded-lg w-[30vw]"
-          ></Image>
-        </div>
+    <mesh {...props} ref={ref}>
+      <planeGeometry args={[3, 4.5, 4]} /> {/* reduced size for mobile */}
+      <meshStandardMaterial map={texture} side={DoubleSide} />
+    </mesh>
+  );
+}
+
+const Landing: React.FC = () => {
+  return (
+    <div className="h-screen px-4 md:px-8 w-full flex flex-col items-start justify-between relative">
+      <div className="h-[60vh] md:h-full w-full absolute top-0 left-0">
+        <Canvas>
+          <ambientLight />
+          <pointLight position={[10, 10, 10]} />
+          <Card position={[0, 0.5, 0.5]} />
+        </Canvas>
       </div>
-    </section>
+
+      <section className="my-4 md:my-10 w-full absolute bottom-0 left-0 px-4 md:px-10">
+        <h2 className="text-4xl md:text-7xl tracking-tighter uppercase font-bold">
+          Smart Business Cards
+          <br />
+          <span className="text-[#CDEA68] text-5xl md:text-8xl">
+            Designed to Impress.
+          </span>
+        </h2>
+        <p className="text-base md:text-lg mt-3 md:mt-4 uppercase tracking-tighter">
+          We help businesses grow by creating unique digital experiences.
+        </p>
+        <div className="flex flex-col md:flex-row gap-2 md:gap-4 mt-4 md:mt-6">
+          <div className="bg-gray-200 px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-sm md:text-base">
+            +100 successful projects
+          </div>
+          <div className="bg-gray-200 px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-sm md:text-base">
+            +40 happy customers
+          </div>
+          <div className="bg-gray-200 px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-sm md:text-base">
+            HubSpot certified
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
