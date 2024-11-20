@@ -1,5 +1,3 @@
-// app/(root)/store/page.tsx
-
 import { ProductCard } from "@/components/product-card";
 
 export default function Page() {
