@@ -1,47 +1,44 @@
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import BlurFade from "@/components/ui/blur-fade";
 import {
-  BellIcon,
-  CalendarIcon,
-  FileTextIcon,
-  GlobeIcon,
-  InputIcon,
+  PersonIcon,
+  Share1Icon,
+  MobileIcon,
+  // ScannerIcon,
+  Link1Icon,
+  MixerHorizontalIcon,
 } from "@radix-ui/react-icons";
 
 const features = [
   {
-    Icon: FileTextIcon,
-    name: "Save your files",
-    description: "We automatically save your files as you type.",
+    Icon: PersonIcon,
+    name: "Digital Identity",
+    description: "Create your professional digital identity in seconds",
     href: "/",
-    cta: "Learn more",
+    cta: "Create Now",
     background: (
       <BlurFade duration={1.5} inViewMargin="350px 0px 0px 0px" inView>
-        <img
-          src="/landing/landing.png"
-          className="absolute -right-20 -top-20 "
-        />
         <video
-          src="/displayvideo.webm"
+          loop
           muted
           autoPlay
-          loop
-          className=" opacity-0 absolute w-full group-hover:opacity-100 transition-all duration-300"
-        ></video>
+          src="/displayvideo.webm"
+          className="absolute w-full object-cover"
+        />
       </BlurFade>
     ),
     className: "col-span-2 row-span-2 sm:col-span-2 sm:row-span-3",
   },
   {
-    Icon: InputIcon,
-    name: "Full text search",
-    description: "Search through all your files in one place.",
+    Icon: Share1Icon,
+    name: "Easy Sharing",
+    description: "Share your digital card with a single tap or scan",
     href: "/",
-    cta: "Learn more",
+    cta: "Learn how",
     background: (
       <BlurFade duration={1.5} inViewMargin="350px 0px 0px 0px" inView>
         <img
-          src="/landing/landing.png"
+          src="/cards/share-card.png"
           className="absolute -right-20 -top-20 "
         />
       </BlurFade>
@@ -49,15 +46,15 @@ const features = [
     className: "col-span-1 row-span-1 sm:col-span-1 sm:row-span-2",
   },
   {
-    Icon: GlobeIcon,
-    name: "Multilingual",
-    description: "Supports 100+ languages and counting.",
+    Icon: MobileIcon,
+    name: "Mobile First",
+    description: "Optimized for all mobile devices and platforms",
     href: "/",
-    cta: "Learn more",
+    cta: "View demo",
     background: (
       <BlurFade duration={1.5} inViewMargin="350px 0px 0px 0px" inView>
         <img
-          src="/landing/landing.png"
+          src="/cards/mobile-card.png"
           className="absolute -right-20 -top-20 "
         />
       </BlurFade>
@@ -65,15 +62,28 @@ const features = [
     className: "col-span-1 row-span-1 sm:col-span-1 sm:row-span-2",
   },
   {
-    Icon: CalendarIcon,
-    name: "Calendar",
-    description: "Use the calendar to filter your files by date.",
+    Icon: MobileIcon,
+    name: "QR Connect",
+    description: "Instant connection through smart QR code scanning",
     href: "/",
-    cta: "Learn more",
+    cta: "Try it",
+    background: (
+      <BlurFade duration={1.5} inViewMargin="350px 0px 0px 0px" inView>
+        <img src="/cards/qr-card.png" className="absolute -right-20 -top-20 " />
+      </BlurFade>
+    ),
+    className: "col-span-1 row-span-1 sm:col-span-1 sm:row-span-2",
+  },
+  {
+    Icon: Link1Icon,
+    name: "Social Links",
+    description: "Connect all your social profiles in one place",
+    href: "/",
+    cta: "Connect now",
     background: (
       <BlurFade duration={1.5} inViewMargin="350px 0px 0px 0px" inView>
         <img
-          src="/landing/landing.png"
+          src="/cards/social-card.png"
           className="absolute -right-20 -top-20 "
         />
       </BlurFade>
@@ -81,32 +91,15 @@ const features = [
     className: "col-span-1 row-span-1 sm:col-span-1 sm:row-span-2",
   },
   {
-    Icon: BellIcon,
-    name: "Notifications",
-    description:
-      "Get notified when someone shares a file or mentions you in a comment.",
+    Icon: MixerHorizontalIcon,
+    name: "Customization",
+    description: "Personalize your card with themes and layouts",
     href: "/",
-    cta: "Learn more",
+    cta: "Customize",
     background: (
       <BlurFade duration={1.5} inViewMargin="350px 0px 0px 0px" inView>
         <img
-          src="/landing/landing.png"
-          className="absolute -right-20 -top-20 "
-        />
-      </BlurFade>
-    ),
-    className: "col-span-1 row-span-1 sm:col-span-1 sm:row-span-2",
-  },
-  {
-    Icon: BellIcon,
-    name: "Know more",
-    description: "know more about our designs and other features.",
-    href: "/",
-    cta: "Learn more",
-    background: (
-      <BlurFade duration={1.5} inViewMargin="350px 0px 0px 0px" inView>
-        <img
-          src="/landing/landing.png"
+          src="/cards/custom-card.png"
           className="absolute -right-20 -top-20 "
         />
       </BlurFade>
