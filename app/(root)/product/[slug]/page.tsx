@@ -45,8 +45,8 @@ const Page = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto p-6 mt-20">
-      <div className="grid lg:grid-cols-2 gap-8">
+    <div className="max-w-8xl mx-auto md:p-16 p-6 mt-10">
+      <div className="grid lg:grid-cols-2 md:gap-32 gap-8 ">
         <div className="space-y-4">
           <div className="flex items-baseline gap-2">
             <h1 className="text-2xl font-semibold">{productData.title}</h1>
@@ -145,7 +145,7 @@ const Page = () => {
 
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Product Description</h3>
-            <div className="grid grid-cols-2 gap-4 text-sm">
+            <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-4 text-sm">
               <div className="space-y-2">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Dimensions</span>
