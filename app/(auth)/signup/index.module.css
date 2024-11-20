@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+AR:wght@100..400&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.signinMain {
+  width: 100vw;
+  height: 100vh;
+  padding: 1.6rem 2rem;
+  background-color: #efd0d63d;
+}
+
+.mainContainer {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.5rem;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.imageContainer {
+  position: relative;
+  height: 100%;
+  width: 80%;
+  background-color: #4a90e2;
+  border-radius: 1.5rem 0 0 1.5rem;
+  overflow: hidden;
+}
+
+.imageContainer img {
+  transition: transform 0.35s ease-out;
+}
+
+.imageContainer img:hover {
+  transform: scale(1.05);
+}
+
+.imageText {
+  position: absolute;
+  transform: translate(-50%, 0%);
+  left: 50%;
+  bottom: 0%;
+  z-index: 1;
+  color: #fff;
+  width: 100%;
+  padding: 1rem 3rem;
+  text-align: right;
+}
+
+.imageText::before {
+  content: "";
+  position: absolute;
+  bottom: 10%;
+  right: 2%;
+  width: 1%;
+  height: 80%;
+  background-color: #fff;
+}
+
+.imageText h2 {
+  z-index: 1;
+  font-family: "Inter", serif;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 90%;
+}
+.imageText p {
+  z-index: 1;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.formContainer {
+  height: 100%;
+  padding: 6rem 2rem;
+  width: 45vw;
+  border-radius: 2rem;
+  background-color: 0;
+}

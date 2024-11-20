@@ -6,7 +6,7 @@ import { motion, useInView } from "framer-motion";
 
 const Details = () => {
   const ref = useRef(null);
-  const inview = useInView(ref, { once: true, margin: "200px 0px 0px 0px" });
+  const inview = useInView(ref, { once: true, margin: "0px 100px -50px 0px" });
 
   return (
     <div
@@ -33,7 +33,7 @@ const Details = () => {
           muted
           autoPlay
           loop
-          className="h-[800px] w-[1400px] object-cover rounded-xl sticky top-0 md:top-32"
+          className="h-[800px] max-sm:min-h-screen w-[1400px] object-cover rounded-xl sticky top-0 md:top-32"
           src="/details/details.webm"
         ></video>
         <TextRevealByWord

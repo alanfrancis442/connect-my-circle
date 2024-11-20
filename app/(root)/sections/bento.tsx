@@ -30,7 +30,7 @@ const features = [
         ></video>
       </BlurFade>
     ),
-    className: "group col-span-2 row-span-3 max-sm:col-span-3",
+    className: "col-span-2 row-span-2 sm:col-span-2 sm:row-span-3",
   },
   {
     Icon: InputIcon,
@@ -46,7 +46,7 @@ const features = [
         />
       </BlurFade>
     ),
-    className: "col-span-1 row-span-2 max-sm:col-span-2",
+    className: "col-span-1 row-span-1 sm:col-span-1 sm:row-span-2",
   },
   {
     Icon: GlobeIcon,
@@ -62,7 +62,7 @@ const features = [
         />
       </BlurFade>
     ),
-    className: "start col-span-1 row-span-2",
+    className: "col-span-1 row-span-1 sm:col-span-1 sm:row-span-2",
   },
   {
     Icon: CalendarIcon,
@@ -78,7 +78,7 @@ const features = [
         />
       </BlurFade>
     ),
-    className: "col-span-1 row-span-2 max-sm:col-span-2",
+    className: "col-span-1 row-span-1 sm:col-span-1 sm:row-span-2",
   },
   {
     Icon: BellIcon,
@@ -95,7 +95,7 @@ const features = [
         />
       </BlurFade>
     ),
-    className: "col-span-1 row-span-2 ",
+    className: "col-span-1 row-span-1 sm:col-span-1 sm:row-span-2",
   },
   {
     Icon: BellIcon,
@@ -111,7 +111,7 @@ const features = [
         />
       </BlurFade>
     ),
-    className: "sm:col-span-1 row-span-1 ",
+    className: "col-span-1 row-span-1 sm:col-span-1 sm:row-span-1",
   },
 ];
 
@@ -121,7 +121,7 @@ export default function Bento() {
       <h1 className="md:text-6xl text-3xl capitalize font-bold">
         Features that make us unique
       </h1>
-      <BentoGrid className="grid container gap-4 grid-cols-3 grid-rows-5">
+      <BentoGrid className="grid container gap-4 grid-cols-2 grid-rows-auto sm:grid-cols-3 sm:grid-rows-5">
         {features.map((feature) => (
           <BentoCard key={feature.name} {...feature} />
         ))}
